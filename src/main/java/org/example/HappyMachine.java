@@ -25,6 +25,8 @@ public class HappyMachine implements VendingMachine {
     public int getBalance() {
         return depositPool;
     }
+
+    //3 more possible products added so adding these to request aswell
     @Override
     public Product request(int id) {
         switch(id){
@@ -58,6 +60,36 @@ public class HappyMachine implements VendingMachine {
                     System.out.println("Add more money!");
                 }
                 break;
+            case 4:
+                if(depositPool >= products[3].getPrice()){
+                    System.out.println(products[3].use());
+                    depositPool -= products[3].getPrice();
+                    break;
+                }
+                else{
+                    System.out.println("Add more money!");
+                }
+                break;
+            case 5:
+                if(depositPool >= products[4].getPrice()){
+                    System.out.println(products[4].use());
+                    depositPool -= products[4].getPrice();
+                    break;
+                }
+                else{
+                    System.out.println("Add more money!");
+                }
+                break;
+            case 6:
+                if(depositPool >= products[5].getPrice()){
+                    System.out.println(products[5].use());
+                    depositPool -= products[5].getPrice();
+                    break;
+                }
+                else{
+                    System.out.println("Add more money!");
+                }
+                break;
             default:
                 System.out.println("Product not found");
                 break;
@@ -83,6 +115,15 @@ public class HappyMachine implements VendingMachine {
                 break;
             case 3:
                 products[2].examine();
+                break;
+            case 4:
+                products[3].examine();
+                break;
+            case 5:
+                products[4].examine();
+                break;
+            case 6:
+                products[5].examine();
                 break;
             default:
                 System.out.println("Product not found.");
