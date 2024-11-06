@@ -8,10 +8,13 @@ public class HappyMachine implements VendingMachine {
     private int depositPool = 0;
 
     public HappyMachine(){
-        products = new Product[3];
-        products[0] = new Broccoli(1, 2.0, "Green Broccoli", 0.5);
-        products[1] = new Snus(2, 49.0, "Kronan", "Bitter Orange");
-        products[2] = new Pepsi(3, 20, "Pepsi Max", 50);
+        products = new Product[6];
+        products[0] = new Greenie(1, 2.0, "Green Broccoli", 0.5);
+        products[1] = new Greenie(2, 3.0, "Brown Broccoli", 0.2);
+        products[2] = new Snus(3, 49.0, "Kronan", "Bitter Orange");
+        products[3] = new Snus(4, 60, "General", "Orginal");
+        products[4] = new SoftDrink(5, 15.0, "Milk", 100);
+        products[5] = new SoftDrink(6, 20, "Pepsi Max", 50);
     }
 
     @Override
@@ -89,10 +92,13 @@ public class HappyMachine implements VendingMachine {
     }
     @Override
     public String[] getProducts() {
-        String[] prods = new String[3];
+        String[] prods = new String[6];
         prods[0] = products[0].examine();
         prods[1] = products[1].examine();
         prods[2] = products[2].examine();
+        prods[3] = products[3].examine();
+        prods[4] = products[4].examine();
+        prods[5] = products[5].examine();
         return prods;
     }
 }
