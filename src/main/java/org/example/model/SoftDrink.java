@@ -1,10 +1,10 @@
 package org.example.model;
 
-public class Pepsi extends Product {
+public class SoftDrink extends Product {
 
     private double size;
 
-    public Pepsi(int id, double price, String productName, double size){
+    public SoftDrink(int id, double price, String productName, double size){
         super(id, price, productName);
         this.size = size;
     }

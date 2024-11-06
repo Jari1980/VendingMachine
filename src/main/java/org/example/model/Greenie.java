@@ -1,9 +1,9 @@
 package org.example.model;
 
-public class Broccoli extends Product {
+public class Greenie extends Product {
     private double weight;
 
-    public Broccoli(int id, double price, String productName, double weight){
+    public Greenie(int id, double price, String productName, double weight){
         super(id, price, productName);
         this.weight = weight;
     }
