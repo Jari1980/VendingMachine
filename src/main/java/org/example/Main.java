@@ -8,7 +8,7 @@ public class Main {
         HappyMachine machine = new HappyMachine();
         machine.addCurrency(Currency.FIVE);
         System.out.println(machine.getBalance());
-        machine.request(1);
+        machine.request(2);
         System.out.println("--------------");
         System.out.println(machine.getBalance());
         machine.endSession();
